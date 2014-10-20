@@ -24,6 +24,8 @@ class ZenviaModule extends BaseModule
 
     public $callBack = 0; // HumanSimpleSend::CALLBACK_INACTIVE
 
+    public $simulate = false;
+
 
     public function init()
     {

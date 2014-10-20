@@ -4,6 +4,7 @@ namespace talma\zenvia;
 
 use yii\base\Component;
 use Yii;
+use yii\helpers\VarDumper;
 
 include_once 'clientApi/HumanClientMain.php';
 
@@ -64,7 +65,14 @@ class ApiComponent extends Component
         $message->setMsgId($msgId);
         $message->setSchedule($schedule);
 
-        $response = $this->humanSimpleSend->sendMessage($message, ($callbackOption ? : $this->_module->callBack));
+        if ($this->_module->simulate === true) {
+            $response = new \HumanResponse();
+            $response->setCode('000');
+            $response->setMessage('Simulado');
+            Yii::trace(VarDumper::dumpAsString($message));
+        } else {
+            $response = $this->humanSimpleSend->sendMessage($message, ($callbackOption ?: $this->_module->callBack));
+        }
 
         return $response;
     }
