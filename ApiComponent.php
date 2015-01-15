@@ -40,6 +40,9 @@ class ApiComponent extends Component
      */
     private $_humanQueryMessage;
 
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         parent::init();
@@ -77,17 +80,31 @@ class ApiComponent extends Component
         return $response;
     }
 
-    public function sendMultipleFileCSV($arquivo)
+    /**
+     * @param $arquivo
+     *
+     * @param null|int $callbackOption
+     *
+     * @return \HumanResponse
+     */
+    public function sendMultipleFileCSV($arquivo, $callbackOption = null)
     {
-        $response = $this->humanMultipleSend->sendMultipleFileCSV(\HumanMultipleSend::TYPE_C, $arquivo);
+        $response = $this->humanMultipleSend->sendMultipleFileCSV(\HumanMultipleSend::TYPE_C, $arquivo, ($callbackOption ?: $this->_module->callBack));
 
         return $response;
     }
 
-    public function sendMultipleList(array $msg_list)
+    /**
+     * @param array $msg_list
+     *
+     * @param null|int $callbackOption
+     *
+     * @return \HumanResponse[]
+     */
+    public function sendMultipleList(array $msg_list, $callbackOption = null)
     {
         $msg_list = implode("\n", $msg_list);
-        $response = $this->humanMultipleSend->sendMultipleList(\HumanMultipleSend::TYPE_C, $msg_list);
+        $response = $this->humanMultipleSend->sendMultipleList(\HumanMultipleSend::TYPE_C, $msg_list, ($callbackOption ?: $this->_module->callBack));
 
         return $response;
     }
