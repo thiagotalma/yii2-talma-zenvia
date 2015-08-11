@@ -2,6 +2,8 @@ yii2-talma-zenvia
 ===========
 Módulo para integração com API da Zenvia
 
+[![Latest Stable Version](https://poser.pugx.org/thiagotalma/yii2-zenvia/v/stable)](https://packagist.org/packages/thiagotalma/yii2-zenvia) [![Total Downloads](https://poser.pugx.org/thiagotalma/yii2-zenvia/downloads)](https://packagist.org/packages/thiagotalma/yii2-zenvia) [![Monthly Downloads](https://poser.pugx.org/thiagotalma/yii2-zenvia/d/monthly)](https://packagist.org/packages/thiagotalma/yii2-zenvia) [![Daily Downloads](https://poser.pugx.org/thiagotalma/yii2-zenvia/d/daily)](https://packagist.org/packages/thiagotalma/yii2-zenvia) [![Latest Unstable Version](https://poser.pugx.org/thiagotalma/yii2-zenvia/v/unstable)](https://packagist.org/packages/thiagotalma/yii2-zenvia) [![License](https://poser.pugx.org/thiagotalma/yii2-zenvia/license)](https://packagist.org/packages/thiagotalma/yii2-zenvia)
+
 Instalação
 ------------
 
