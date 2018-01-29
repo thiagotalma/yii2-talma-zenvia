@@ -1,10 +1,10 @@
 {
     "name": "thiagotalma/yii2-zenvia",
-    "description": "Módulo para integração com API da Zenvia",
+    "description": "MÃ³dulo para integraÃ§Ã£o com API da Zenvia",
     "keywords": ["yii2", "module", "zenvia", "sms"],
     "homepage": "https://github.com/thiagotalma/yii2-talma-zenvia",
     "type": "yii2-module",
-    "license": "BSD 3-Clause",
+    "license": "MIT",
     "authors": [
         {
             "name": "Thiago Talma",
